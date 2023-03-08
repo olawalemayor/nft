@@ -53,14 +53,28 @@ export default function NftModal({ item }: IModalProps) {
       {discordUrl && (
         <div className="my-3 flex flex-col">
           <span className="font-bold text-blue-700">Discord</span>
-          {discordUrl}
+          <a
+            href={discordUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            {discordUrl}
+          </a>
         </div>
       )}
 
       {twitterUsername && (
         <div className="my-3 flex flex-col">
           <span className="font-bold text-blue-700">Twitter</span>
-          {twitterUsername}
+          <a
+            href={"http://twitter.com/" + twitterUsername}
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            @{twitterUsername}
+          </a>
         </div>
       )}
 
