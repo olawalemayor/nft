@@ -29,14 +29,14 @@ export default function NftList({ setSelectedNFT }: IListProp) {
 
   return (
     <div className="h-full overflow-y-auto w-full ">
-      <div className="md:sticky md:top-0 md:bg-gray-800 z-50 shadow-lg pb-3 mt-4">
+      <div className="md:sticky md:top-0 md:bg-gray-800 z-50 shadow-lg pb-3 mt-4 w-full">
         <h1 className="text-7xl font-sans">NFT LIST</h1>
 
-        <span className="text-3xl flex flex-col sm:flex-row justify-center items-center gap-4 my-2 py-2">
+        <span className="text-3xl flex flex-col sm:flex-row justify-center items-center gap-4 my-2 p-2">
           <span>Address :</span>
           <input
             type="text"
-            className="px-2 py-1 rounded-lg bg-white outline-none text-gray-900"
+            className="px-2 py-1 rounded-lg bg-white outline-none text-gray-900 w-full sm:w-auto"
             onChange={(e) => setAddress(e.currentTarget.value)}
           />
 
