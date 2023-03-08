@@ -8,6 +8,7 @@ interface IModalProps {
 export default function NftModal({ item }: IModalProps) {
   const openSeaContract = item.contract.openSea as OpenSeaCollectionMetadata;
   const balance = item.balance;
+  const address = item.contract.address;
 
   const {
     collectionName,
@@ -29,8 +30,15 @@ export default function NftModal({ item }: IModalProps) {
         </div>
       )}
 
+      {address && (
+        <div className="flex flex-col mb-3">
+          <span className="font-bold text-blue-700">Owner Address</span>
+          <span className="max-w-md mx-auto">{address}</span>
+        </div>
+      )}
+
       {description && (
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-3">
           <span className="font-bold text-blue-700">Description</span>
           <span className="max-w-md mx-auto">{description}</span>
         </div>
